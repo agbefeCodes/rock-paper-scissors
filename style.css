@@ -23,7 +23,8 @@ body {
   height: 25%;
   width: 100px;
   margin: 3px;
-  background-color: black;
+  background-color: rgb(159, 154, 154);
+  font-size: 2rem;
 }
 .btns {
   display: flex;

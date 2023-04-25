@@ -1,6 +1,8 @@
 // SELECTING DOM ELEMENTS
 const btns = document.querySelectorAll('.btn');
 const reset = document.querySelector('.reset');
+const playerScore = document.querySelector('.p-Score');
+const cpuScore = document.querySelector('.c-Score');
 
 // function to get computer choice
 const getComputerChoice = () => {
@@ -17,6 +19,9 @@ let cScore = 0;
 let playCount = 0;
 
 // PLAY ROUND FUNCTION
+
+const choices = [];
+
 const playRound = (pChoice, cChoice) => {
   if (
     (pChoice === 'rock' && cChoice === 'scissors') ||
@@ -37,13 +42,14 @@ const playRound = (pChoice, cChoice) => {
   }
   cScore += 1;
   playCount += 1;
+  cpuScore.textContent=cScore;
   console.log(playCount);
   console.log(pScore, cScore);
   return `You Lose! ${cChoice} beats ${pChoice}`;
 };
 
 // PLAY GAME
-const game = playerChoice => {
+const game = (playerChoice, c) => {
   let result;
 
   const value = playRound(playerChoice, getComputerChoice());
@@ -63,10 +69,12 @@ const game = playerChoice => {
 };
 
 // PLAYER CHOICE FUNCTION
+
 const playerChoiceHandler = e => {
   if (playing) {
     const {value} = e.target.dataset;
     game(value);
+    playerScore.textContent = pScore;
   }
 };
 
@@ -82,6 +90,7 @@ const resetHandle = () => {
   pScore = 0;
   cScore = 0;
   playCount = 0;
+  playerScore.textContent=pScore;
 };
 
 reset.addEventListener('click', resetHandle);
