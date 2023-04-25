@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+.arena {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100vw;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: #e9e6e6;
+}
+
+.stage{
+    height: 100%;
+    width: 300px;
+    background-color: red;
+}
+.choice{
+    height: 25%;
+    width: 100px;
+    margin: 3px;
+    background-color: black;
+
+
+}
+
+.btn {
+  width: 100px;
+  font-size: 50px;
+}
+
+.reset {
+  width: 500px;
+}
