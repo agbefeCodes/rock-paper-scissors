@@ -4,6 +4,7 @@ const reset = document.querySelector('.reset');
 const playerScore = document.querySelector('.p-Score');
 const cpuScore = document.querySelector('.c-Score');
 const stage = document.querySelector('.stage');
+
 // function to get computer choice
 const getComputerChoice = () => {
   const choices = ['rock', 'paper', 'scissors'];
@@ -12,12 +13,13 @@ const getComputerChoice = () => {
 
   return choice;
 };
+
 // GAME ATTRIBUTES
 let playing = true;
 let pScore = 0;
 let cScore = 0;
-// PLAY ROUND FUNCTION
 
+// PLAY ROUND FUNCTION
 const playRound = (pChoice, cChoice) => {
   // GET CPU IMOJI
   const cpuImoji = ['✊🏾', '🤚🏾', '✌🏾'];
