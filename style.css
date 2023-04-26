@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
 body {
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Sedgwick Ave Display', cursive;
 }
-
+.app_head {
+  text-align: center;
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 3rem;
+}
 .arena {
   display: flex;
   justify-content: center;
@@ -11,20 +19,26 @@ body {
   width: 100vw;
   padding: 20px;
   margin-bottom: 50px;
-  background-color: #e9e6e6;
+  background-color: #f8f5f5;
 }
 
 .stage {
   height: 100%;
   width: 300px;
-  background-color: red;
+  font-size: 2rem;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  line-height:3rem;
+
 }
 .choice {
   height: 25%;
   width: 100px;
   margin: 3px;
-  background-color: rgb(159, 154, 154);
+  background-color: rgb(217, 214, 214);
   font-size: 2rem;
+  text-align: center;
+  border-radius: 3px;
 }
 .btns {
   display: flex;
@@ -43,10 +57,15 @@ body {
 
 .btn {
   width: 100px;
-  font-size: 50px;
+  font-size: 3rem;
 }
 
 .reset {
   width: 50%;
   height: 3rem;
+  font-size: 2rem;
+}
+
+.result{
+  font-size: 7rem;
 }
